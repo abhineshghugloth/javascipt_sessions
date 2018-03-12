@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="newStudent" />
+    <button id="mybutton"> Add Student </button>
+   
+    <ul id="usersList">
+
+    </ul>
+
+    <script>
+     /*   var codeCamp = ['ganesh','ramesh'];
+       var isFound = codeCamp.indexOf('ramesh');
+
+       if(isFound>=0){
+         codeCamp[isFound]="New Ramesh";
+         console.log(codeCamp)
+       }else {
+           console.log("ramesh not found");
+           
+       }
+    */
+    /*
+        var myString = "Ganesh,Ramesh,Suresh,Vignesh" ;
+        var myStringArray = myString.split(',');
+        console.log(myStringArray);
+    */
+
+document.getElementById("mybutton").onclick = function (){
+    var newUserVal = document.getElementById('newStudent').value;
+     if(newUserVal){
+        document.getElementById('usersList').innerHTML +=  "<li>"+ newUserVal + "</li>";
+     }else{
+         alert("Please enter some data")
+     }
+    document.getElementById('newStudent').value = '';
+    
+}
+
+ 
+
+/* function updateView(){
+    document.getElementById('usersList').innerHTML = "";
+
+    for(var i=0;i<studentsArray.length;i++){
+        document.getElementById('usersList').innerHTML +=  "<li>"+ studentsArray[i] + "</li>";
+    }
+
+}
+ */
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    //Array methods:
+
+    //Shift
+        
+     /*    var box = ["Pen","Pencil","Eraser","Scale"];
+            console.log(box);
+            var newBox = box.shift();
+            console.log(box); */
+
+    //Unshift
+    /* var box = ["Pen","Pencil","Eraser","Scale"];
+            console.log(box);
+            var newBox = box.unshift("Book");
+            console.log(box); */
+    
+    //delete
+    /*  var box = ["Pen","Pencil","Eraser","Scale"];
+        delete box[3];
+        box[3]= "book";
+        console.log(box) */
+
+    //splice
+       /*  var box = ["Pen","Pencil","Eraser","Scale"];
+           console.log(box.splice(0,2,"hamm"))
+           console.log(box); */
+    //concat
+       /*  var box = ["Pen","Pencil","Eraser","Scale"];
+        var newBox = box.concat(["Book"]);
+        console.log(newBox); */
+    //Pop
+    /* newBox.pop();
+    console.log(newBox); */
+    //Push
+  /*   newBox.push("New Book");
+    console.log(newBox); */
+
+/*     var box = [2,3,4];
+        
+    box = box.map(function (val){
+       return val*val;
+    });
+    console.log(box); */
+    var  words = [
+            ['Ganesh', "SUrame",99,"ssc",434], 
+            ['Ramesh', "SUrame",11,"ssc",435],
+            ['Suresh', "SUrame",45,"ssc",436], 
+            ['Vineeth', "SUrame",5,"ssc",437],
+            ['Vipin', 55,"ssc",438],
+            ['Praveen', "asdf",100,"ssc",439],
+            ['Abhinesh',"asdf",48,"ssc",440],
+            ['Sravanthi', 66,"ssc",439]
+        ];
+   
+    var found;
+    var status = prompt("Enter Status");
+   var finalResult =  words.filter(function (student){
+        if(status=='passed'){
+           return student[1] >35
+        }else if (status == 'failed'){
+            return student[1] < 35
+        }
+    })
+    console.log(finalResult)
+    /* words.forEach(function (val){
+        if(val[3]==rollNum){
+            found  = val;
+            console.log(found);
+        }
+    }) */
+   
+
+   
+   /*  var passedMarks = words.filter( function (num){
+        return  num > 35
+    });
+    var failedMarks = words.filter( function (num){
+        return  num < 35
+    }); 
+    console.log(failedMarks)
+*/
+        
+   /*  words.forEach(function (val){
+        console.log(val);
+    })   */  
+    </script>
+</body>
+</html>
