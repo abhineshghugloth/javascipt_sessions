@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let map = new Map();
+    // scopes 
+    // Hoisting:
+   /*  var myvar = "I am new string";
+    myFun();
+    function myFun(){
+        myvar = "asdfsad"
+    }; */
+
+   /*  
+    console.log(myvar);
+    var  myvar = "asfd";
+    console.log(myvar); */
+
+    // Function Declaration
+    /* function myFun(){
+        console.log("asd")
+    } */
+    // Functon Expression
+  /*   var myFun1 = function (){
+        console.log("2323")
+    }
+   */
+    // callback functions
+   function agree(question,feedback) {
+
+       var confrim = confirm(question);
+        if(confrim){
+            feedback("yes come eat");
+        }else{
+            feedback("No Dont come");
+        }
+   } 
+
+   agree( "Did you get burger?", function (feeback){ 
+       alert(feeback)})
+        
+
+    </script>
+    
+</body>
+</html>
