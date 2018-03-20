@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objects</title>
+</head>
+<body>
+    <table width="50%" border="1">
+        <thead>
+            <th>Movie Name</th>
+            <th>Movie Rating</th>
+            <th>Movie Cast</th>
+            <th>Now Playing</th>
+        </thead>
+        <tbody id="movies">
+            
+        </tbody>
+    </table>
+    
+    <script>
+    
+        // Example of array
+    
+    var movieArray = [
+    {
+        bookedSeats:40,
+            totalSeats:50,
+            movieName: "Paari",
+            movieCast: "Nikhil",
+            rating:{ public:20,critics:10},
+            isRelased:true,
+          
+        } ,
+        {
+            rating:{ public:20,critics:10},
+            isRelased:true,
+            bookedSeats:40,
+            totalSeats:50,
+            movieName: "Kirak Party",
+            movieCast: "Nikhil",
+        } ,
+        {
+            rating:{ public:20,critics:10},
+            isRelased:true,
+            bookedSeats:40,
+            totalSeats:50,
+            movieName: "Black Panther",
+            movieCast: "Tchalla",
+        } ,
+       
+    ]
+
+    function addMovies (){
+
+        movieArray[2].rating.critics = "Blah";
+
+        for(var i=0; i<movieArray.length;i++){
+            var tableRow = ''
+            tableRow += '<tr> <td>' + movieArray[i].movieName +"</td>" + "<td>"+ movieArray[i].rating.critics + movieArray[i].rating.public +"</td>" + "<td>"+ movieArray[i].movieCast+ "</td>"+ "<td>"+ movieArray[i].isRelased+"</td>" +'</tr> '
+                document.getElementById("movies").innerHTML += tableRow;
+            }
+
+
+    }
+    addMovies () 
+        // What is an object? 
+
+            // set of key value pairs 
+
+        // How it is deffrent
+       /*  var movieObject = {
+            rating:78,
+            isRelased:true,
+            movieName: "Kirak Party",
+            movieCast: "Nikhil",
+        };
+        document.getElementById("movies").innerHTML =  '<tr> <td>' + movieObject.movieName +"</td>" + "<td>"+ movieObject.rating+"</td>" + "<td>"+ movieObject.movieCast+ "</td>"+ "<td>"+ movieObject.isRelased+"</td>" +'</tr> '
+           */      
+        // Example to illustarte an object
+        /* 
+        var movieObject = {
+            rating:{ public:20,critics:10},
+            isRelased:true,
+            bookedSeats:40,
+            totalSeats:50,
+            movieName: "Kirak Party",
+            movieCast: "Nikhil",
+        } */
+
+     /*    var cupon ={
+            name:'7pe70',
+            startDate:"2/2/22",
+            endDate:"4/3/22",
+            paymentModes: ["Debit","credit"],
+            groupUser:["scan and pay", "new users"],
+            banksAvailbale:[{
+                bankName:"PNB",
+                card:'debit'
+            },{
+                bankName:[
+                    
+                ],
+                card:'debit'
+            }]
+        } */
+
+        // what is JSON  
+  /*   var myJson = [ { names:[ ]}] */
+        // Object methods
+
+
+var mySring = new Array('blah blah') ;
+console.log(mySring);
+var myObj = new Object();
+console.log(myObj);
+//console.log(mySring == 'blah blah')
+
+    </script>
+</body>
+</html>
