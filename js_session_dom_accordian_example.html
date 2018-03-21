@@ -52,18 +52,17 @@
     </div>
 
     <script>
-       // document.querySelector("#one").style.display ="block";
+       document.querySelector("#one").style.display ="block";
 
         function exandChild(id,element){
-            resetState();
-            element.className = "accordian-heading active"
-           var elementState =   document.querySelector(id).style.display;
-            if(elementState == 'none'){
-                document.querySelector(id).style.display ="block";
-            }else{
+            var elementState =   document.querySelector(id).style.display;
+            if(elementState == 'block'){
                 document.querySelector(id).style.display ="none";
+                return;
             }
-            
+            resetState();
+             element.className = "accordian-heading active"
+             document.querySelector(id).style.display ="block";
         }
 
         function resetState(){
