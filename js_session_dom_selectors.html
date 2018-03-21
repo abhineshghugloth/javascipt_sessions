@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> number of iterations</h1>
+    <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item" id="last-Item">three</li>
+        <li class="list-item" id="last-Item">Four</li>
+    </ul>
+    
+    <button onclick="selectID()">select by ID </button>
+    <button onclick="selectClass()">select by className </button>
+    <button onclick="selectTag()">select by tagName </button>
+    
+    <button onclick="querySelecor()">select by querySelecor </button>
+    <button onclick="querySelecorAll()">select by querySelecorAll </button>
+   
+
+
+    <script>
+    function selectID(){    
+        console.log(document.getElementById('last-Item'));
+    }
+
+    function selectClass(){
+        console.log(document.getElementsByClassName('list-item'));
+    }
+
+    function selectTag(){
+        console.log(document.getElementsByTagName('li'));
+    }
+    function querySelecor(){
+       console.log( document.querySelector('.list-item'))
+    }
+
+    function querySelecorAll(){
+        console.log(document.querySelectorAll('#last-Item , .list-item'))
+    }
+    </script>
+</body>
+</html>
