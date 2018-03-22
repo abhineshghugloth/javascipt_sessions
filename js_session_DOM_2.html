@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM2</title>
+    <style>
+    .active{
+        color:red;
+    }
+    .super-highlight{
+        font-weight: bolder;
+        padding:20px;
+    }
+    </style>
+</head>
+<body>
+
+    <ul  class="order-list">
+        <li id="afterme">Hello 1</li>
+        <li >Hello 2</li>
+    </ul>
+    
+    <script>
+    var element = document.getElementsByClassName('order-list');
+    //console.log(element[0].parentElement.children)
+    // access parent element 
+    //element[0].parentElement.style.padding=0;
+    //access siblings
+   // element[0].nextElementSibling.style.color="red";
+    //acess child elements
+    //console.log(element[0].children[1].firstElementChild)
+    //set Attributes 
+   // console.log(element[0].getAttribute('class'))
+   /// element[0].setAttribute('class','active super-highlight')
+    //get Attributefo
+    //create element 
+    //console.log(element[0])
+  
+   for(var i = 0; i<100;i++){
+    
+    var newElement = document.createElement('li');
+    newElement.innerHTML = "I am new " + i;
+    
+   }
+   element[0].removeChild(document.getElementById('afterme'))
+    //appendChild
+   
+    //removechild
+    </script>
+</body>
+</html>
