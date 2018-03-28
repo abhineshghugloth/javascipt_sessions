@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP Javascript</title>
+</head>
+
+<body>
+
+    <script>
+        
+         /*    var life = new Object();
+            life.heart = 1;
+            life.lungs = 2;
+            life.eyes = 2;
+            life.legs = 2;
+            life.hand = 2;
+            life.weight =50;
+
+            var boy = Object.create(life);
+            boy.shortHair = true;
+            boy.beard = true;
+      
+        var praveen = Object.create(boy);
+        praveen.name = "praveen";
+    console.log(praveen.weight); */
+
+function Person (fname,lname){
+    var defaultLegs = 2;
+    this.firstName = fname;
+    this.lastName =lname;
+    this.legs = defaultLegs;
+
+    this.tellName = function (){
+        return giveName(this.firstName , this.lastName);
+    }
+
+    function giveName (fname,lanme){
+       
+        return fname + " " + lanme;
+    }
+
+};
+
+Person.prototype.sayHello = function (){
+    return "Hello!" + this.firstName
+};
+
+
+
+var ramesh = new Person("Ramesh", "Pulle ");
+var gamesh = new Person("Gamesh", "Pulle ");
+
+
+
+console.log(gamesh.tellName())
+
+console.log(ramesh.tellName())
+
+
+    </script>
+</body>
+
+</html>
